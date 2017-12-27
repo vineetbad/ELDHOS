@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ELDHOS</string>
+    <string-array name="driving_dropdown_options">
+        <item>OffDuty</item>
+        <item>Sleeper</item>
+        <item>Driving</item>
+        <item>OnDuty</item>
+    </string-array>
+
+</resources>
