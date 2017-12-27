@@ -10,6 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.io.StringReader;
+
 public class HomePage extends AppCompatActivity {
 
     Spinner spinner_driving_options;
@@ -25,14 +27,14 @@ public class HomePage extends AppCompatActivity {
         adapter = ArrayAdapter.createFromResource(this, R.array.driving_dropdown_options, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner_driving_options.setAdapter(adapter);
-        // setup the
+        //TODO: Need to find a way to grey out an already selected item (not the biggest deal, can skip this for now)
         spinner_driving_options.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String driving_options_selected = adapterView.getItemAtPosition(i).toString();
-                //Need to create an implement activity that can save something if not then cancel
+                //TODO: Need to create and a dialogue builder activity that can save something if not then cancel
                 AlertDialog.Builder driving_state_change_dialog = new AlertDialog.Builder(HomePage.this);
-                //Toast.makeText(adapterView.getContext(), driving_options_selected, Toast.LENGTH_SHORT).show();
+                Toast.makeText(adapterView.getContext(), driving_options_selected, Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -42,4 +44,10 @@ public class HomePage extends AppCompatActivity {
         });
 
     }
+
+
+
+
+
+
 }
